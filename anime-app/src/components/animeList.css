@@ -1,0 +1,39 @@
+.cad{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #dcdcdc;
+    width: 200px;
+    height: 260px;
+    gap: 50px;
+
+}
+
+.anime-item{
+    width: 160px;
+    height: 240px;
+    padding: 0%;
+
+}
+
+.img{
+    display: flex;
+
+    width: 160px;
+    height: 160px;
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    padding-top: 10px;
+    margin: 0%;
+}
+
+.message{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}

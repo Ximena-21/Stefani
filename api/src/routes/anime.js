@@ -12,6 +12,21 @@ const getScoreMessage = (score) => {
   }
 };
 
+// Ruta para obtener imágenes predeterminadas
+router.get('/default-images', async (req, res) => {
+  try {
+    const response = await axios.get('https://api.jikan.moe/v4/anime?q=anime&sfw');
+    const defaultImagesWithScoreMessages = response.data.data.map((anime) => ({
+      ...anime,
+      scoreMessage: getScoreMessage(anime.score)
+    }));
+    res.json(defaultImagesWithScoreMessages);
+  } catch (error) {
+    console.error('Error al obtener imágenes predeterminadas:', error);
+    res.status(500).send('Error al obtener imágenes predeterminadas');
+  }
+});
+
 router.get('/', async (req, res) => {
   const { q: query } = req.query;
 

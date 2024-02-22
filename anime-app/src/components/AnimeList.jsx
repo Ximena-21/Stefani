@@ -1,4 +1,4 @@
-import'./animeList.css'
+// import'./animeList.js'
 // eslint-disable-next-line react/prop-types
 function AnimeList ({ animeData }){
 
